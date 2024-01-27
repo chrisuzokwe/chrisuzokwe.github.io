@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Portfolio</title>
+
+    <style>
+        body, html {
+            height: 100%;
+            width: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #ffffff; /* Background color for the whole page */
+            overflow: auto;
+        }
+
+        p {
+            font-size: 10pt;
+            font-family: "Times New Roman",serif;
+            line-height: 1.4;
+            font-weight: lighter;
+        }
+
+        .center-panel {
+            max-width: 465px;
+            width: auto; /* Auto width to maintain aspect ratio */
+            min-height: 640px;
+            margin: 0 auto; /* Center the panel */
+            border: 2px solid black; /* Slight border */
+            border-radius: 20px 20px 20px 20px; /* Rounded corners */
+            background-color: #FFFCF5; /* Off-white/cream color */
+            padding: 20px 30px;
+            box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1); /* Optional: adds a subtle shadow */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            flex-grow: 1; /* Allow panel to grow */
+            overflow: auto; /* Add scroll if content overflows */
+        }
+
+        .profile-pic {
+            width: 120px;
+            height: 120px;
+            border: 2px solid black; /* Slight border */
+            border-radius: 50%;
+            background-size: cover;
+            background-position: center;
+            margin-bottom: 5px; /* Added space below image on smaller screens */
+        }
+
+        .title-card {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: row; /* Stack vertically on smaller screens */
+        }
+
+        .info {
+            text-align: left;
+            flex-grow: 1; /* Allows text to take available space */
+            margin-bottom: 8px;
+        }
+
+        .info h1, .info p {
+            margin: 3px 0;
+        }
+
+        /* Responsive adjustments for smaller screens */
+        @media screen and (max-width: 768px) {
+
+            .title-card {
+                flex-direction: row; /* Stack elements vertically on smaller screens */
+            }
+
+            .profile-pic {
+                width: 20vw; /* Adjust size for medium screens */
+                height: 20vw;
+                max-width: 120px;
+                max-height: 120px;
+                aspect-ratio: 1 / 1;
+            }
+
+            .social-icons li {
+                margin-right: 8px; /* Adjust spacing between social icons */
+            }
+
+            /* Other responsive adjustments as needed */
+        }
+
+        @media screen and (max-width: 576px) {
+            .center-panel {
+                max-width: 80%;
+                aspect-ratio: auto;
+            }
+
+            .profile-pic {
+                margin-bottom: 10px; /* Adjust spacing */
+                width: 27vw; /* Adjust size for small screens */
+                height: 27vw;
+                max-width: 120px;
+                max-height: 120px;
+                aspect-ratio: 1 / 1;
+            }
+
+        }
+
+        .info h1 {
+            font-size: clamp(25px, 5vw, 30px); /* Minimum size, preferred size, maximum size */
+            font-family: "Times New Roman", serif;
+            font-weight: 100;
+        }
+
+        .title-card {
+                flex-direction: row; /* Side by side on larger screens */
+            }
+
+        .social-icons {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            justify-content: left;
+            margin: 0;
+        }
+
+        .social-icons li {
+            margin-right: 8px;
+        }
+
+        .social-icon {
+            width: 25px;
+            height: 25px;
+        }
+
+        .divider {
+            height: 1px;
+            background-color: #333;
+            margin: 10px 0;
+            width: 100%;
+            opacity: 50%;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="center-panel">
+        <div class="title-card">
+            <div class="info">
+                <h1>Christopher Uzokwe</h1>
+                <p><i>chris [dot] uzokwe [at] gmail</i></p>
+                    <ul class="social-icons">
+                        <li>
+                            <a href="https://www.facebook.com/yourprofile">
+                                <img src="assets/mail.png" alt="Email" class="social-icon">
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="https://www.linkedin.com/in/chrisuzokwe/">
+                                <img src="assets/linkedin.png" alt="LinkedIn" class="social-icon">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://twitter.com/internetcypress">
+                                <img src="assets/twitter.png" alt="Twitter" class="social-icon">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/chrisuzokwe">
+                                <img src="assets/github.png" alt="GitHub" class="social-icon">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://open.spotify.com/playlist/3xGi4Emq4LyValQV90LPzy?si=c12dfb9223e6426b">
+                                <img src="assets/spotify.png" alt="Spotify" class="social-icon">
+                            </a>
+                        </li>
+                    </ul>
+
+
+                <p>Machine Learning Data Engineer, Creative Entrepreneur</p>
+            </div>
+            <div class="profile-pic" style="background-image: url('assets/cybrog.jpg');"></div>
+        </div>
+        <div class="divider"></div>
+        <div>
+                <p>
+                Welcome! I'm a Machine Learning Data Engineer with a Masters in Electrical Engineering and Bachelors in Computer Engineering from Drexel University.
+                My main areas of expertise include applied machine learning, image and signal processing, software engineering, and data engineering.
+                </p>
+
+                <p>
+                    Currently, I'm a Machine Learning Data Engineer at <a href="https://www.zeroeyes.com" target="_blank">ZeroEyes</a>, developing data and inference pipelines for ML teams and databases.
+                    Previously, <a href="https://www.youtube.com/watch?v=pqwfYj_5pW4&pp=ygUUc3BvdGlmeSBpbnRlcm5zIDIwMjE%3D" target="_blank">I was a data science intern at Spotify</a>, creating datasets for insights, and researched computer vision and musical structure analysis at Drexel's Music Entertainment Technology Lab.
+                    My master's thesis was defended in 2021, with publications in <a href="https://program.ismir2020.net/lbd_438.html" target="_blank">ISMIR 2020</a> and <a href="https://archives.ismir.net/ismir2021/latebreaking/000055.pdf" target="_blank">ISMIR 2021</a> as late-breaking demos.
+                    For a detailed work history, <a href="resume.html" target="_blank">see my resume</a>.
+                </p>
+
+
+                <p>
+                In my free time I'm a DJ and music curator, and I dabble in photography. I'm currently working on a community-driven music curation platform, <a href="https://www.uzplaylists.xyz" target="_blank">Uzplaylists</a>.
+                </p>
+
+                <p>
+                This page was made to highlight some of my experiences and current endeavors, in case anyone is looking. In the future I plan to include blog posts and more things I've created, and make a sort of public repository.
+                    If you would like to connect or share opportunities, feel free to reach out!
+                </p>
+        </div>
+    </div>
+</body>
+</html>
